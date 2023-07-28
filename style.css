@@ -1,7 +1,35 @@
 .cell {
     border: 1px solid black;
+    margin: 0px;
+
+    flex: 1 1 auto;
+    aspect-ratio: 1/1;
 }
 
 .hovered {
     background-color: red;
+}
+
+.row {
+    display: flex;
+}
+
+#grid-table {
+    display: flex;
+    flex-direction: column;
+    width: max(40vw, 40vh);
+    aspect-ratio: 1/1;
+}
+
+#grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }

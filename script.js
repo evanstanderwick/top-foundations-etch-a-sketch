@@ -5,6 +5,7 @@ const MAX_SQUARES = 100;
 const EDIT_GRID_ID = 'edit-grid-button';
 const GRID_CONTAINER_ID = 'grid-container';
 const GRID_TABLE_ID = 'grid-table'
+const GRID_TR_CLASS = 'row';
 const GRID_TD_CLASS = 'cell';
 
 
@@ -16,6 +17,7 @@ function createGrid(numSquares) {
     gridTable.setAttribute('id', GRID_TABLE_ID);
     for (i = 0; i < numSquares; i++) {
         const gridTableRow = document.createElement('tr');
+        gridTableRow.classList.add(GRID_TR_CLASS);
         for (j = 0; j < numSquares; j++) {
             const gridTableData = document.createElement('td');
             gridTableData.classList.toggle(GRID_TD_CLASS);
@@ -31,7 +33,6 @@ function createGrid(numSquares) {
 // changes cell background color to red after being hovered on
 function addCellEffects(cell){
     cell.addEventListener('mouseover', () => {
-        console.log('getting here');
         cell.classList.add('hovered');
     });
 }
